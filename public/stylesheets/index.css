@@ -6,12 +6,18 @@
 h1{
 	font-size: 30px;
 }
+a{
+	font-size: 26px;
+	font-style: italic;
+}
+
 
 #gameOptions{
-	margin-left: 300px;
 	width: 1100px;
 	height: 70px;
 	border-radius: 15px;
+	position: relative;
+
 }
 
 #content {
