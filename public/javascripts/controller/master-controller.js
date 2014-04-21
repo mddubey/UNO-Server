@@ -1,6 +1,4 @@
 var uno = angular.module('uno-master', []);
-var config = {};
-config.host = '127.0.0.1:5001/'
 
 uno.controller('masterCtrl', function ($scope, $http) {
     $scope.masterName = "me";
@@ -24,13 +22,5 @@ uno.controller('masterCtrl', function ($scope, $http) {
     $scope.clearData = function () {
         dataCleared = true;
         $http({method: 'post', url: 'gameOver', data: {master: $scope.masterName}});
-        // window.close();
-    }
-
-    // var window = gui.Window.get();
-    // window.on('close', function () {
-    //     if ($scope.gameCreated)
-    //         $http({method: 'post', url: config.host + 'gameOver', data: {master: $scope.masterName}});
-    //     this.close(true);
-    // });
+    };
 });

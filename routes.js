@@ -69,6 +69,10 @@ routes.joinGame = function (req, res) {
     logger.info(playerName + ' joined game of master '+masterName);
 };
 
+routes.closeGameAfterGameFinished = function(master){
+    delete gameMasters[master];
+}
+
 routes.closeMaster = function (req, res) {
     var masterName = req.body.master;
     delete gameMasters[masterName];
