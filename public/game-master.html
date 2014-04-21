@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Game Master</title>
+    <link rel="stylesheet" href="./stylesheets/start-game.css"/>
+</head>
+
+<body>
+<div>
+    <div class="centerDiv">
+        <form action='/startGame' method='post'>
+            <table class="getDetails">
+                <tr>
+                    <td>Master Name:</td>
+                    <td><input type="text" class="inputDetail"/></td>
+                    <br>
+                <tr>
+                    <td>Packs:</td>
+                    <td><input type="number" class="inputDetail"/></td>
+                    <br>
+                <tr>
+                    <td>Players:</td>
+                    <td><input type="number" class="inputDetail"/></td>
+                    <br>
+                <tr>
+                    <td colspan="2"><br/>
+                        <center><input type="submit" class="round-corner-button" value="Create Game"/></center>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <div class="notifyGameStart">
+        <label>{{masterName}} is already in use as a Game Master. Please choose another Master Name.</label>
+    </div>
+
+    <!-- <div class="notifyGameStart">
+        Game created by {{masterName}} for {{noOfPlayers}} players with {{noOfPacks}} pack
+        <br/>
+        <input type="button"  class="round-corner-button" onclick="clearData()" value="Close Game">
+    </di -->v>
+</div>
+</body>
+</html>

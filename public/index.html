@@ -1,0 +1,105 @@
+<html>
+<head>
+	<title>UNO</title>
+	<link rel="stylesheet" type="text/css" href="./stylesheets/index.css">
+	<link rel="stylesheet" href="./stylesheets/bootstrap.min.css">
+</head>
+<body>
+	<h1 id="title">Welcome to UNO</h1>
+
+	<div class="bg-success" id="gameOptions">
+		<label id = "master">Create a game as <a href="./game-master.html"> Game Master </a></label>
+		<label id="player"><a href="">Download</a> to join game as a Player</label>
+	</div>
+
+	<div id="content">
+		<h1><strong>About</starong></h1>
+		<p class="lead">UNO is a multi-player game.</p>
+
+		<br/>
+		<h2><strong>Get Started</starong></h2>
+
+		<ul>
+			<li class="lead">Go to the folder where you have cloned the repo.</li>
+			<li class="lead">run <code>nodewebkit</code> and game will start with a screen which will ask weather you will be a game-master or game-player.</li>
+		</ul>
+
+		<br/>
+		<h3><strong>Game-Master</starong></h3>
+
+		<ul>
+			<li class="lead">In game master screen you will get three options to give <code>master-name</code>, <code>Number of Packs</code> and <code>Number of Players</code> for the game.</li>
+			<li class="lead">After filling these fields you will click on <code>create game</code> button.</li>
+			<li class="lead">It will show the message that game creation message.</li>
+		</ul>
+
+		<br/>
+		<h3><strong>Game-Player</starong></h3>
+
+		<ul>
+			<li class="lead">In game player screen you will get two options <code>Game-Master</code> to give name of master who started the game and <code>Player Name</code> for the game.</li>
+			<li class="lead">After filling these two fields you will click on <code>join</code> button.</li>
+			<li class="lead">You will wait till all the players join the game.</li>
+			<li class="lead">After joining all players you will get the player screen.</li>
+			<li class="lead">As title of screen your name will be shown.</li>
+			<li class="lead">All the player's catch buttons will be there.</li>
+			<li class="lead">At the right side of screen activity log of game will be shown.</li>
+			<li class="lead">In the center of screen the <code>close pile</code> button,<code>hint</code> and <code>open pile</code> will be shown.</li>
+			<li class="lead">At the bottom of screen player's card will be there.</li>
+			<li class="lead">UNO button will be there to declare <code>uno</code>.</li>
+		</ul>
+
+		<br/>
+		<h2><strong>How To Play</starong></h2>
+
+		<h3><strong>Play a card</starong></h3>
+
+		<ul>
+			<li class="lead">In your turn you can play a card.</li>
+			<li class="lead">If the played card will not match the rules player will get a warning message.</li>
+		</ul>
+
+		<br/>
+		<h3><strong>Draw Cards</starong></h3>
+
+		<ul>
+			<li class="lead">You can draw a card in your turn.</li>
+			<li class="lead">After draw you will get 5 seconds to play the card after 5 seconds turn will go to next player.</li>
+			<li class="lead">After a draw of <code>Draw Two</code> turn will immediately go to next player.</li>
+		</ul>
+
+		<br/>
+		<h3><strong>Play a wild or Draw Four</starong></h3>
+
+		<ul>
+			<li class="lead">After playing a wild card or draw four a screen will appear having four buttons of colors red,blue,green and yellow.</li>
+			<li class="lead">If you won't choose the color in 2 seconds the game will go back to it's last played state.</li>
+		</ul>
+
+		<br/>
+		<h3><strong>Declare Uno</starong></h3>
+
+		<ul>
+			<li class="lead">You can declare <code>UNO</code> when you have only one card in your hand.</li>
+		</ul>
+
+		<br/>
+		<h3><strong>Catch Player</starong></h3>
+
+		<ul>
+			<li class="lead">You can <code>catch</code> a player who has only one card and has not declare <code>UNO</code>.</li>
+			<li class="lead">The caught player will get two cards.</li>
+		</ul>
+
+		<br/>
+		<h3><strong>Game Over</starong></h3>
+
+		<ul>
+			<li class="lead">The game will be over when a player will finish all cards in hand.</li>
+			<li class="lead">The next screen will be calculating points of players.</li>
+			<li class="lead">After that the Result Screen will be shown.</li>
+		</ul>
+	</div>
+
+</body>
+</html>
