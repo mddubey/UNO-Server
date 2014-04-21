@@ -2,24 +2,26 @@
 <head>
     <title>Game Master</title>
     <link rel="stylesheet" href="./stylesheets/start-game.css"/>
+    <script type="text/javascript" src="./javascripts/angular/angular.min.js"></script>
+    <script type="text/javascript" src="./javascripts/controller/master-controller.js"></script>
 </head>
 
 <body>
-<div>
-    <div class="centerDiv">
-        <form action='/startGame' method='post'>
+<div ng-app="uno-master" ng-controller="masterCtrl">
+    <div class="centerDiv" ng-hide="gameCreated">
+        <form ng-submit="createGame()">
             <table class="getDetails">
                 <tr>
                     <td>Master Name:</td>
-                    <td><input type="text" class="inputDetail"/></td>
+                    <td><input type="text" class="inputDetail" ng-model="masterName"/></td>
                     <br>
                 <tr>
                     <td>Packs:</td>
-                    <td><input type="number" class="inputDetail"/></td>
+                    <td><input type="number" class="inputDetail" ng-model="noOfPacks"/></td>
                     <br>
                 <tr>
                     <td>Players:</td>
-                    <td><input type="number" class="inputDetail"/></td>
+                    <td><input type="number" class="inputDetail" ng-model="noOfPlayers"/></td>
                     <br>
                 <tr>
                     <td colspan="2"><br/>
@@ -30,15 +32,15 @@
         </form>
     </div>
 
-    <div class="notifyGameStart">
+    <div class="notifyGameStart" ng-show="inUse">
         <label>{{masterName}} is already in use as a Game Master. Please choose another Master Name.</label>
     </div>
 
-    <!-- <div class="notifyGameStart">
+    <div class="notifyGameStart" ng-show="gameCreated">
         Game created by {{masterName}} for {{noOfPlayers}} players with {{noOfPacks}} pack
         <br/>
-        <input type="button"  class="round-corner-button" onclick="clearData()" value="Close Game">
-    </di -->v>
+        <input type="button"  class="round-corner-button" ng-click="clearData()" value="Close Game">
+    </div>
 </div>
 </body>
 </html>
