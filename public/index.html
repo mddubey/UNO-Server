@@ -3,13 +3,29 @@
 	<title>UNO</title>
 	<link rel="stylesheet" type="text/css" href="/stylesheets/index.css">
 	<link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+	<script type="text/javascript">
+		function hideDownloads(){
+			document.getElementById('download').style.visibility = "hidden";
+		}
+
+		function showDownloads(){
+			document.getElementById('download').style.visibility = "visible";
+		}
+	</script>
 </head>
 <body>
 	<h1 id="title">Welcome to UNO</h1>
 
 	<center><div class="bg-success" id="gameOptions">
-		<label id = "master">Create a game as <a href="/game-master.html"> Game Master </a></label>
-		<label id="player"><a href="">Download</a> to join game as a Player</label>
+		<label class="bigLabel" class = "leftLabel">Create a game as <a href="/game-master.html"> Game Master </a></label>
+		<label class="bigLabel" class="rightLabel"><a onclick="showDownloads()">Download</a> to join game as a Player</label>
+	</div></center>
+
+	
+	<center><div id="download" class="bg-success">
+		<button type="button" class="close" aria-hidden="true" onclick="hideDownloads()">&times;</button>
+		<label class = "leftLabel"><a href="/downloads/uno.zip">Mac-OS</a></label>
+		<label class="rightLabel"><a href="/downloads/uno.zip">Windows</a></label>
 	</div></center>
 
 	<div id="content">
