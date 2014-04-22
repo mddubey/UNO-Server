@@ -1,35 +1,34 @@
 <html>
 <head>
     <title>Game Master</title>
-    <link rel="stylesheet" href="./stylesheets/start-game.css"/>
-    <script type="text/javascript" src="./javascripts/angular/angular.min.js"></script>
-    <script type="text/javascript" src="./javascripts/controller/master-controller.js"></script>
+    <link rel="stylesheet" href="/stylesheets/game-master.css"/>
+    <script type="text/javascript" src="/javascripts/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/javascripts/controller/master-controller.js"></script>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css"/>
 </head>
 
 <body>
-<div ng-app="uno-master" ng-controller="masterCtrl">
-    <div class="centerDiv" ng-hide="gameCreated">
-        <form ng-submit="createGame()">
-            <table class="getDetails">
-                <tr>
-                    <td>Master Name:</td>
-                    <td><input type="text" class="inputDetail" ng-model="masterName"/></td>
-                    <br>
-                <tr>
-                    <td>Packs:</td>
-                    <td><input type="number" class="inputDetail" ng-model="noOfPacks"/></td>
-                    <br>
-                <tr>
-                    <td>Players:</td>
-                    <td><input type="number" class="inputDetail" ng-model="noOfPlayers"/></td>
-                    <br>
-                <tr>
-                    <td colspan="2"><br/>
-                        <center><input type="submit" class="round-corner-button" value="Create Game"/></center>
-                    </td>
-                </tr>
-            </table>
+<div id="header"><img src="/images/uno_header.png"> </div>
+</br>
+  
+<center><div ng-app="uno-master" ng-controller="masterCtrl">
+    <div ng-hide="gameCreated">
+        <form ng-submit="createGame()" role="form">
+            <div class="form-group">
+                <label >Master Name:</label>
+                <input type="text" class="form-control"  ng-model="masterName">
+            </div>
+            <div class="form-group">
+                <label>Packs:</label>
+                <input type="number" class="form-control" ng-model="noOfPacks">
+            </div>
+            <div class="form-group">
+                <label>Players:</label>
+                <input type="number" class="form-control" ng-model="noOfPlayers">
+            </div>
+            <input type="submit" class="round-corner-button" value="Create Game"/>
         </form>
+
     </div>
 
     <div class="notifyGameStart" ng-show="inUse">
@@ -41,6 +40,7 @@
         <br/>
         <input type="button"  class="round-corner-button" ng-click="clearData()" value="Close Game">
     </div>
-</div>
+</div></center>
+
 </body>
 </html>
